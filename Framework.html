@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frameworks</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: linear-gradient(to right, #1c1c1c, #2c2c2c); /* Dark gradient background */
+            color: #f0f0f0; /* Light text for contrast */
+        }
+
+        .container {
+            text-align: center;
+            background-color: rgba(40, 40, 40, 0.9); /* Darker container background */
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.8); /* Strong shadow for depth */
+        }
+
+        .container h1 {
+            font-size: 36px;
+            margin-bottom: 20px;
+            color: #00ffcc; /* Highlighted title color */
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .form-group {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .dropdown {
+            position: relative;
+        }
+
+        .dropdown select {
+            font-size: 16px;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            background-color: #333333; /* Darker dropdown background */
+            color: #f0f0f0; /* Light text for dropdown */
+            cursor: pointer;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
+        }
+
+        .dropdown select:focus {
+            outline: none;
+            box-shadow: 0 0 5px #00ffcc; /* Highlight on focus */
+        }
+
+        button {
+            background-color: #00ffcc; /* Bright button color */
+            color: black;
+            font-size: 16px;
+            padding: 10px 30px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
+        }
+
+        button:hover {
+            background-color: #00d9aa; /* Slightly darker hover color */
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Select Country</h1>
+        <div class="form-group">
+            <label for="country">Country:</label>
+            <div class="dropdown">
+                <select id="country">
+                    <option value="uk">UK</option>
+                    <option value="usa">USA</option>
+                    <option value="uk-usa">UK & USA</option>
+                </select>
+            </div>
+            <button onclick="alert('Form Submitted!')">Submit</button>
+        </div>
+    </div>
+</body>
+</html>

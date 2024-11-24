@@ -15,37 +15,66 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 40px 80px; /* Increased padding for larger header */
-            background-color: #658CBB;
+            padding: 40px 80px;
+            background-color: #00d9aa;
             color: white;
-            font-size: 24px; /* Increased font size for header */
+            font-size: 24px;
         }
         header h1 {
             margin: 0;
-            font-size: 50px; /* Made the website name larger */
+            font-size: 50px;
         }
         nav {
-            flex-grow: 1; /* Allows nav to take available space */
-            text-align: center; /* Aligns Services link to the middle */
+            position: relative; /* Required for dropdown positioning */
         }
         nav a {
             color: white;
             text-decoration: none;
-            font-size: 20px; /* Increased font size for Services link */
+            font-size: 25px;
+            position: relative;
+            cursor: pointer;
         }
         nav a:hover {
             text-decoration: underline;
         }
+        /* Dropdown menu styling */
+        .dropdown {
+            display: none; /* Hidden by default */
+            position: absolute;
+            top: 100%; /* Position it below the Services link */
+            left: 0;
+            background-color: #ffffff;
+            color: #0D0907;
+            padding: 10px 0;
+            border-radius: 5px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+        }
+        .dropdown a {
+            display: block;
+            padding: 10px 20px;
+            text-decoration: none;
+            color: #0D0907;
+            font-size: 18px;
+        }
+        .dropdown a:hover {
+            background-color: #00d9aa;
+            color: white;
+        }
+        /* Show dropdown on hover */
+        nav:hover .dropdown {
+            display: block;
+        }
         main {
             padding: 20px;
-            display: flex; /* Flex layout for image and text */
+            display: flex;
             align-items: center;
             justify-content: center;
-            gap: 20px; /* Space between image and text */
+            gap: 20px;
         }
         main img {
-            max-width: 700px; /* Restrict image width */
-            border-radius: 50px; /* Optional: Rounded corners */
+            max-width: 700px;
+            border-radius: 50px;
         }
         main .content {
             max-width: 600px;
@@ -65,8 +94,14 @@
     <header>
         <h1>ExportEasE</h1>
         <nav>
-            <a href="#services" style="font-size: 25px;">Services</a>
-            
+            <a href="#services">Services</a>
+            <!-- Dropdown Menu -->
+            <div class="dropdown">
+                <a href="#frameworks">Frameworks</a>
+                <a href="#compliance-tracker">Compliance Tracker</a>
+                <a href="#ai-query-assistant">AI Query Assistant</a>
+                <a href="#insights-alerts">Insights & Alerts</a>
+            </div>
         </nav>
     </header>
     <main>
